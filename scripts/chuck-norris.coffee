@@ -135,4 +135,4 @@ module.exports = (robot) ->
   
   robot.respond /./i, (res) ->
     res.send "Don't talk directly to me! I am just a freaking robot!"
-    console.log("FUCK");
+    console.log("DUCK");
