@@ -50,6 +50,9 @@ module.exports = (robot) ->
   robot.hear /thank you for your patience/i, (res) ->
     res.send res.random np
 
+  robot.hear /drugs/i, (res) ->
+    res.send "We got the drugs init! https://media.giphy.com/media/QtuuT23dF9KIU/200w_d.gif"
+
   #
   # lulz = ['lol', 'rofl', 'lmao']
   #
