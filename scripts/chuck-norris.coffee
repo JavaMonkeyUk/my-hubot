@@ -1,31 +1,37 @@
 module.exports = (robot) ->
 
-  robot.hear /topology/i, (res) ->
+  robot.hear /\btopology\b/i, (res) ->
     res.send "Don't you mean Galileo?"
 
-  robot.hear /catalog/i, (res) ->
+  robot.hear /\bcatalog\b/i, (res) ->
     res.send "Don't you mean Apollo?"
 
-  robot.hear /gateway/i, (res) ->
+  robot.hear /\bgateway\b/i, (res) ->
     res.send "Don't you mean Ishtar?"
   
-  robot.hear /orchestrator/i, (res) ->
+  robot.hear /\borchestrator\b/i, (res) ->
     res.send "Don't you mean Daytona?"
 
-  robot.hear /stratoss-health/i, (res) ->
+  robot.hear /\bstratoss-health\b/i, (res) ->
     res.send "Don't you mean Watchtower?"
 
-  robot.hear /ops /i, (res) ->
+  robot.hear /\bops\b/i, (res) ->
     res.send "Don't you mean Nimrod?"
 
-  robot.hear /agree/i, (res) ->
+  robot.hear /\bagree/i, (res) ->
     res.send ":iagree:"
 
-  robot.hear /hello/i, (res) ->
+  robot.hear /\bhello\b/i, (res) ->
     res.send "Target Acquired"
 
-  robot.hear /bye/i, (res) ->
+  robot.hear /\bbye\b/i, (res) ->
     res.send "bye وداعا 안녕"
+
+  robot.hear /\bfail/i, (res) ->
+    res.send ":fail:"
+
+  robot.hear /\bpass\b/i, (res) ->
+    res.send ":pass:"
 
   iAgree = ['I agree too.','Isn\'t it nice when someone agrees']
   robot.hear /i agree/i, (res) ->
